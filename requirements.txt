@@ -1,0 +1,9 @@
+# Direct dependencies verified by reports/verification.json on Python 3.12.
+altair==6.3.0
+duckdb==2.0.0
+numpy==2.5.4
+pandas==3.1.1
+plotly==7.1.0
+pyarrow==26.0.1
+streamlit==1.66.1
+yfinance==1.8.0

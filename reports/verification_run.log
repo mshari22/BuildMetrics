@@ -1,0 +1,174 @@
+2026-11-06 21:05:21.923 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+test_01_all_bronze_and_silver_parquets (__main__.DataAndWarehouseQA.test_01_all_bronze_and_silver_parquets) ... ok
+test_02_exact_gold_schema_types (__main__.DataAndWarehouseQA.test_02_exact_gold_schema_types) ... C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:70: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  frame = connection.execute(f"SELECT * FROM {table}").df()
+C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:70: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  frame = connection.execute(f"SELECT * FROM {table}").df()
+ok
+test_03_fact_prices_reconcile_to_silver (__main__.DataAndWarehouseQA.test_03_fact_prices_reconcile_to_silver) ... ok
+test_04_date_dimension_and_correlation_view (__main__.DataAndWarehouseQA.test_04_date_dimension_and_correlation_view) ... ok
+test_05_primary_foreign_and_check_constraints (__main__.DataAndWarehouseQA.test_05_primary_foreign_and_check_constraints) ... ok
+test_06_lineage_and_cutoff (__main__.DataAndWarehouseQA.test_06_lineage_and_cutoff) ... C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:148: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  metadata = connection.execute("SELECT * FROM warehouse_metadata").df().iloc[0]
+C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:148: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  metadata = connection.execute("SELECT * FROM warehouse_metadata").df().iloc[0]
+ok
+test_07_silver_rejects_invalid_data (__main__.DataAndWarehouseQA.test_07_silver_rejects_invalid_data) ... ok
+test_08_simulated_history_is_reproducible (__main__.DataAndWarehouseQA.test_08_simulated_history_is_reproducible) ... ok
+test_09_query_runner_cli (__main__.DataAndWarehouseQA.test_09_query_runner_cli) ... ok
+test_10_compile_all_sources_and_app_sql (__main__.DataAndWarehouseQA.test_10_compile_all_sources_and_app_sql) ... C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:207: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  rows = {name: len(connection.execute(sql).df()) for name, sql in dashboard.APP_QUERIES.items()}
+C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:207: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  rows = {name: len(connection.execute(sql).df()) for name, sql in dashboard.APP_QUERIES.items()}
+ok
+test_11_read_only_snapshot_releases_connection (__main__.DataAndWarehouseQA.test_11_read_only_snapshot_releases_connection) ... 2026-11-06 21:05:25.665 WARNING streamlit.runtime.caching.cache_data_api: No runtime found, using MemoryCacheStorageManager
+ok
+test_12_normalization_and_correlation_math (__main__.DataAndWarehouseQA.test_12_normalization_and_correlation_math) ... C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:234: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  meta = connection.execute(dashboard.APP_QUERIES["metadata"]).df().iloc[0]
+C:\Users\mamri\Desktop\BuildMetrics\scripts\verify_project.py:234: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  meta = connection.execute(dashboard.APP_QUERIES["metadata"]).df().iloc[0]
+ok
+test_13_default_executive_dashboard (__main__.DashboardQA.test_13_default_executive_dashboard) ... 2026-11-06 21:05:25.990 WARNING streamlit.runtime.scriptrunner_utils.script_run_context: Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+C:\Users\mamri\Desktop\BuildMetrics\app\main.py:55: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  frames = {name: connection.execute(sql).df() for name, sql in APP_QUERIES.items()}
+C:\Users\mamri\Desktop\BuildMetrics\app\main.py:55: Pandas4Warning: The inplace keyword in DataFrame.drop is deprecated and will be removed in a future version (PDEP-8).
+See https://pandas.pydata.org/docs/dev/whatsnew/v3.1.0.html#deprecation-inplace for more details.
+  frames = {name: connection.execute(sql).df() for name, sql in APP_QUERIES.items()}
+ok
+test_14_empty_filters_show_warning (__main__.DashboardQA.test_14_empty_filters_show_warning) ... 2026-11-06 21:05:27.457 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-06 21:05:28.082 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_15_reversed_date_range (__main__.DashboardQA.test_15_reversed_date_range) ... 2026-11-06 21:05:28.576 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_16_single_month_and_no_growth_baseline (__main__.DashboardQA.test_16_single_month_and_no_growth_baseline) ... 2026-11-06 21:05:29.069 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_17_normalized_index_and_price_level_correlation (__main__.DashboardQA.test_17_normalized_index_and_price_level_correlation) ... 2026-11-06 21:05:29.744 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_18_only_global_or_only_local_materials (__main__.DashboardQA.test_18_only_global_or_only_local_materials) ... 2026-11-06 21:05:30.670 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+2026-11-06 21:05:31.295 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_19_missing_database_has_graceful_error (__main__.DashboardQA.test_19_missing_database_has_graceful_error) ... 2026-11-06 21:05:32.050 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+Cannot read the Gold warehouse
+Traceback (most recent call last):
+  File "C:\Users\mamri\Desktop\BuildMetrics\app\main.py", line 538, in main
+    version = DATABASE_PATH.stat()
+              ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.12_3.12.2800.0_x64__qbz5n2kfra8p0\Lib\pathlib.py", line 840, in stat
+    return os.stat(self, follow_symlinks=follow_symlinks)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [WinError 2] The system cannot find the file specified: 'C:\\Users\\mamri\\Desktop\\BuildMetrics\\reports\\nonexistent.duckdb'
+ok
+test_20_streamlit_server_health (__main__.DashboardQA.test_20_streamlit_server_health) ... ok
+test_21_bilingual_labels_and_filter_persistence (__main__.DashboardQA.test_21_bilingual_labels_and_filter_persistence) ... 2026-11-06 21:05:33.868 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_22_light_theme_plotly_and_no_visible_engineering_terms (__main__.DashboardQA.test_22_light_theme_plotly_and_no_visible_engineering_terms) ... 2026-11-06 21:05:34.948 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+test_23_detail_pagination_sorting_and_filter_changes (__main__.DashboardQA.test_23_detail_pagination_sorting_and_filter_changes) ... 2026-11-06 21:05:36.021 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.
+ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 15.683s
+
+OK
+{
+  "verified_at": "2026-11-06T18:05:37.622094+00:00",
+  "as_of": "2026-11-06",
+  "passed": true,
+  "tests_run": 23,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "dependencies": {
+    "pandas": "3.1.1",
+    "numpy": "2.5.4",
+    "pyarrow": "26.0.1",
+    "duckdb": "2.0.0",
+    "yfinance": "1.8.0",
+    "streamlit": "1.66.1",
+    "altair": "6.3.0",
+    "plotly": "7.1.0"
+  },
+  "evidence": {
+    "parquet": [
+      {
+        "file": "data\\bronze\\brent_oil_raw.parquet",
+        "rows": 2981,
+        "nulls": 0,
+        "start": "2015-01-02",
+        "end": "2026-11-06"
+      },
+      {
+        "file": "data\\bronze\\steel_index_raw.parquet",
+        "rows": 2980,
+        "nulls": 0,
+        "start": "2015-01-02",
+        "end": "2026-11-06"
+      },
+      {
+        "file": "data\\bronze\\gastat_raw.parquet",
+        "rows": 429,
+        "nulls": 0,
+        "start": "2015-01-01",
+        "end": "2026-11-01"
+      },
+      {
+        "file": "data\\silver\\brent_oil_silver.parquet",
+        "rows": 143,
+        "nulls": 0,
+        "start": "2015-01-01",
+        "end": "2026-11-01"
+      },
+      {
+        "file": "data\\silver\\steel_index_silver.parquet",
+        "rows": 143,
+        "nulls": 0,
+        "start": "2015-01-01",
+        "end": "2026-11-01"
+      },
+      {
+        "file": "data\\silver\\gastat_silver.parquet",
+        "rows": 429,
+        "nulls": 0,
+        "start": "2015-01-01",
+        "end": "2026-11-01"
+      }
+    ],
+    "gold_counts": {
+      "dim_date": 143,
+      "dim_material": 5,
+      "fact_prices": 715,
+      "vw_global_local_correlation": 143
+    },
+    "expected_null_growth_rates": {
+      "mom_change_pct": 5,
+      "yoy_change_pct": 60
+    },
+    "invalid_writes_rejected": 12,
+    "lineage_sha256_verified": 3,
+    "query_runner_exit_code": 0,
+    "analytics_demo_statements": 5,
+    "app_query_row_counts": {
+      "prices": 715,
+      "correlation": 143,
+      "counts": 3,
+      "metadata": 1
+    },
+    "compiled_python_files": 11,
+    "streamlit_health": "HTTP 200 / ok"
+  },
+  "limitations": [
+    "Local GASTAT prices are simulated, not official statistics.",
+    "Global Steel Index uses the SLX ETF proxy in USD per share.",
+    "The current month is provisional.",
+    "Passing QA is not proof of the absence of every possible defect."
+  ]
+}

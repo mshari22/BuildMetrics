@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.py[cod]
+database/.gold_build_*/
+*.duckdb.wal
+reports/nonexistent.duckdb
